@@ -1,0 +1,131 @@
+:root {
+    --surface-color: #fff;
+    --curve: 30;
+  }
+  
+ 
+ .category__container{
+     position: relative;
+     justify-content: center;
+     justify-items: center;
+     padding: 0 8rem;
+    
+ }
+  
+  .cards {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fit,180px);
+    gap:0 4rem;
+    margin-left: 10em;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 80%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0.9em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    /*background-color: var(--surface-color);*/
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    background: #98c1d9;/*#adb5bd;/*6c757d;/*a9927d;/*886f68;/*#353535;/*5bc0be;/*d2d2cf;/*e5e5e5;/*#75c9c8;/*82c0cc;/*#669bbc;/*#83c5be;*/
+    justify-content: center;
+   
+  }
+  
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    /*color: #242424;*/
+    text-align: center;
+    color:#46494c ;
+    font-weight: 600;
+
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .7em; 
+    color: #D7BDCA;  
+  }
+  
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #46494c;
+    font-family: "MockFlowFont";   
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    
+
+  @media screen and (max-width: 600px) {
+
+    .category__container{
+      position: relative;
+      justify-content: center;
+      justify-items: center;
+      padding: 0 0rem;
+     
+  }
+
+  }
+
+  @media screen and (max-width: 960px) {
+
+    .category__container{
+      position: relative;
+      justify-content: center;
+      justify-items: center;
+      padding: 0 0rem;
+
+  }
+
+  }

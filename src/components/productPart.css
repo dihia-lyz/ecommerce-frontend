@@ -1,0 +1,74 @@
+.first_container{
+    width: 100%;
+    position: relative;
+    top: 12rem;   
+}
+
+.box-c {
+    position: relative;
+    top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    height:100px;
+  }
+  .box-c Link {line-height:125px;}
+  
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  .custom-underline,
+  .custom-underline:hover,
+  .custom-underline:focus,
+  .custom-underline:active {
+    color: #242424;
+    text-decoration: none;
+  }
+  .custom-underline::after {
+    content: "";
+    position: absolute;
+  }
+  .box-c .custom-underline::after {
+    top: 120%;
+    height: 2px !important;
+    width: 50%;
+    left: 25%;
+    background-color:  var(--second);
+      transition: 0.4s ease-out all .1s;
+  }
+  
+  .box-c:hover .custom-underline::after {
+    width: 90%;
+    left: 5%;
+      transition: 0.5s ease all;
+  }
+  
+.grid_element{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-gap: 0 1.2rem;
+    gap:1rem 2rem;
+    list-style-type: none;
+    justify-content: center
+}
+
+@media screen and (max-width: 960px) {
+.first_container{
+  margin-top: 20rem;
+  display: block;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  .first_container{
+    top: 55rem;
+  }
+  
+  }
